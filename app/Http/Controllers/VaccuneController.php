@@ -33,7 +33,7 @@ class VaccuneController extends Controller
     public function create()
     {
         return view('addnewvaccune');
-        //hola aqui soy un cambio
+        
     }
 
     /**
