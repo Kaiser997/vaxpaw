@@ -44,12 +44,20 @@ class AppointmentController extends Controller
      */
     public function store(Request $request)
     {
+        $validatedData = $request->validate([
+            'animal_id' => 'required|exists:animals,id',
+            'user_id' => 'required|exists:users,id',
+            'name' => 'required|string|max:255',
+            'description' => 'required|string',
+            'date' => 'required|date',
+        ]);
+
         Appointment::create([
-            'animal_id'=>$request->animal_id,
-            'user_id' =>$request ->user_id,
-            'name' => $request->name,
-            'description'=> $request->description,
-            'date'=>$request->date,
+            'animal_id' => $validatedData['animal_id'],
+            'user_id' => $validatedData['user_id'],
+            'name' => $validatedData['name'],
+            'description' => $validatedData['description'],
+            'date' => $validatedData['date'],
             
         ]);
         Session::flash('success','Cita registrada correctamente');

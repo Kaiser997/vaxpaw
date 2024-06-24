@@ -27,16 +27,16 @@ Route::group(['middleware' => 'auth'], function () {
 
         //Agregar cita
         Route::get('/add',[AppointmentController::class,'mostrarForm']);
-        Route::post('/addappointment',[AppointmentController::class,'store']);
+        Route::post('/addappointment',[AppointmentController::class,'store'])->name('cita.agregar');
         
 
         //agregar animal
-        Route::get('/addnewanimal',[AnimalController::class,'create']);
-        Route::post('/addanimal',[AnimalController::class,'store']);
+        Route::get('/addnewanimal',[AnimalController::class,'create'])->name('animal.agregado');
+        Route::post('/addanimal',[AnimalController::class,'store'])->name('animal.agregar');
 
         //agregar vacuna
         Route::get('/addnewvaccune',[VaccuneController::class,'mostrarFormulario'])->name('vacuna.registrada');
-        Route::post('/addvaccune',[VaccuneController::class,'store']);
+        Route::post('/addvaccune',[VaccuneController::class,'store'])->name('vacuna.agregar');
 
         //eliminar vacuna
         Route::delete('/deletevaccune/{id}',[VaccuneController::class,'destroy']);
@@ -49,12 +49,12 @@ Route::group(['middleware' => 'auth'], function () {
 
         //eliminar animal
         
-        Route::delete('/deleteanimal/{id}',[AnimalController::class,'destroy']);
+        Route::delete('/deleteanimal/{id}',[AnimalController::class,'destroy'])->name('delete.animal');
 
         //editar animal
         Route::get('/editaranimal/{id}',[AnimalController::class,'edit'])->name('animal.edit');
    
-        Route::put('/actualizar/{id}',[AnimalController::class,'update']);
+        Route::put('/actualizar/{id}',[AnimalController::class,'update'])->name('actualizar.animal');
 
         //editar vacuna
         Route::get('/editarvacuna/{id}',[VaccuneController::class,'vacunasEditar'])->name('animal.edit');

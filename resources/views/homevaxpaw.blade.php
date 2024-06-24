@@ -93,8 +93,8 @@
                     <div class="feature bg-info text-white rounded-3 mb-3 d-flex justify-content-center align-items-center" style="width: 100px; height: 100px; font-size: 3rem;">
                         <i class="bi bi-shop"></i>
                     </div>
-                    <h2 class="h3 fw-bolder text-center">Una tienda especial</h2>
-                    <p class="cuadrito1 text-center">Explora hoy nuestro marketplace y descubre por qué somos la elección número uno de los dueños de mascotas conscientes y cariñosos como tú.</p>
+                    <h2 class="h3 fw-bolder text-center">Agenda tus citas</h2>
+                    <p class="cuadrito1 text-center">Agenda tu cita fácilmente a través de nuestra plataforma y asegura que tu fiel compañero reciba la mejor atención</p>
                 </div>
             </div>
         </div>

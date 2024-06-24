@@ -41,6 +41,7 @@ class VaccuneController extends Controller
      */
     public function store(Request $request)
     {
+        
         Vaccune::create([
             'animal_id'=>$request->animal_id,
             'name' => $request->name,

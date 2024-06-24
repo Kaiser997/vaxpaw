@@ -107,5 +107,6 @@ class AnimalController extends Controller
         return view('eliminaranimal', compact('animals'));
     }
 
+    
 }
 

@@ -16,7 +16,7 @@
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
-<body style="background-image: url(img/huellas.png);">
+<body class="bg">
     <div id="app">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark bs-primary-bg-subtle">
             <div class="container px-10">
@@ -65,4 +65,6 @@
         </main>
     </div>
 </body>
+
+
 </html>
